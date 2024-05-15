@@ -1,7 +1,6 @@
 fetch('https://api.github.com/users/VitorLopesW')
     .then(response => response.json())
     .then(data => {
-        console.log(data)
         // DOM variables
             const avatar = document.querySelector('.profile-avatar')
             const profileName = document.querySelector('.profile-name')
@@ -18,7 +17,4 @@ fetch('https://api.github.com/users/VitorLopesW')
             profileFollowers.textContent = data.followers
             profileFollowing.textContent = data.following
             profileLink.href = data.html_url
-
-
-
     })
