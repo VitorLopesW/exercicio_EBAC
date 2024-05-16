@@ -30,13 +30,16 @@
 class Animal {
     constructor(args) {
         // Verificação de argumentos 
+
             if(!args) 
                 return console.error("É necessário passar um argumento")
             
-            const checkGenero = args.genero.toLowerCase()
-            if(checkGenero != "macho" && checkGenero != "fêmea" && checkGenero === '') 
-                return console.error("Gênero inválido, informe macho ou fêmea ou deixe em branco para não informar o gênero")
-
+            if(args.genero != undefined){
+                const checkGenero = args.genero.toLowerCase()
+                if(checkGenero != "macho" && checkGenero != "fêmea" && checkGenero === '') 
+                    return console.error("Gênero inválido, informe macho ou fêmea ou deixe em branco para não informar o gênero")
+            }
+            
         // Variáveis da classe
 
             this.nome = args.nome || "Nome não informado"
@@ -114,10 +117,25 @@ const poseidon = new Peixe({
 
 const piuPiu = new Ave({
     nome: "Piu Piu",
-    genero: "fêmea",
+    genero: "macho",
     cor: "amarelo",
     especie: "Canário",
     sabeVoar: true,
-    VelocidadeMaximaVoo: "60 km/h"
+    VelocidadeMaximaVoo: "50 km/h"
 })
 
+// Teste instanciando um animal sem argumentos
+const nullFish = new Peixe({})
+// output esperado:
+/*
+    Peixe {
+        nome: 'Nome não informado',
+        genero: 'Gênero não informado',
+        cor: 'Cor não informada',
+        especie: 'Espécie não informada',
+        VelocidadeMaximaDeNado: 'Não informado',
+        ProfundidadeMaxima: 'Não informado',
+        Pulmonado: 'Não informado',
+        AguaDoce: 'Não informado'
+    }
+*/
