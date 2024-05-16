@@ -1,9 +1,11 @@
-"use strict";
-function multiplicacao(a, b) {
-    return a * b;
+function multiplicacao(a: number, b: number): number {
+    return a * b
 }
-function saudacao(nome) {
-    return `Olá ${nome}`;
+
+function saudacao(nome: string): string {
+    return `Olá ${nome}`
 }
-console.log(multiplicacao(5, 2));
-console.log(saudacao('Fulano'));
+
+console.log(multiplicacao(1, 2))
+
+console.log(saudacao('Fulano'))
