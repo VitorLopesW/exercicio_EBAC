@@ -1,11 +1,9 @@
-function multiplicacao(a: number, b: number): number {
-    return a * b
+"use strict";
+function multiplicacao(a, b) {
+    return a * b;
 }
-
-function saudacao(nome: string): string {
-    return `Olá ${nome}`
+function saudacao(nome) {
+    return `Olá ${nome}`;
 }
-
-console.log(soma(1, 2))
-
-console.log(saudacao('Fulano'))
+console.log(multiplicacao(5, 2));
+console.log(saudacao('Fulano'));
