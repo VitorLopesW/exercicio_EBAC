@@ -121,4 +121,3 @@ const piuPiu = new Ave({
     VelocidadeMaximaVoo: "60 km/h"
 })
 
-console.log(mikeJaggers)
